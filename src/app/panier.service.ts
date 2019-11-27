@@ -7,11 +7,13 @@ import { HttpClient} from '@angular/common/http';
 export class PanierService {
 
   achats = [];
+  pTotal = 0;
 
   constructor(private http: HttpClient) { }
 
   ajouterAuPanier(produit) {
     this.achats.push(produit);
+    this.pTotal += produit.prix;
   }
 
   getAchats() {
@@ -26,13 +28,13 @@ export class PanierService {
   getFraisLivraison() {
     return this.http.get('/assets/livraison.json');
   }
-  getTotal(){
+  /*getTotal(){
     var prix_t = 0;
     var i = 0;
     for(i=0;i<this.achats.length;i++){
       prix_t=prix_t+this.achats.prix;
     }
     return prix_t;
-  }
+  }*/
 
 }

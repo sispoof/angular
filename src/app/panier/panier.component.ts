@@ -10,12 +10,14 @@ import { PanierService } from '../panier.service';
 export class PanierComponent implements OnInit {
 
   achats;
-  prix_t;
+  pTotal;
   constructor(private panierService: PanierService) { }
 
   ngOnInit() {
     this.achats = this.panierService.getAchats();
-    this.prix_t = this.panierService.getTotal();
+    this.pTotal = this.panierService.pTotal;
+   
   }
+
 
 }
