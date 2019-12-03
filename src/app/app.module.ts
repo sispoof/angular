@@ -20,7 +20,7 @@ import { LivraisonComponent } from './livraison/livraison.component';
     AlertesProduitComponent,
     DetailsProduitComponent,
     PanierComponent,
-    LivraisonComponent
+    LivraisonComponent,
   ],
   imports: [
     BrowserModule,
